@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <link rel="stylesheet" href="StyleSheet.css"/>
+    <title>Tea Pose</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <div align="center">
+
+        <a href="index.html"><img src="Images/logo.png width="180px" height="180px"/></a> <br /> 
+
+          <em>
+                <a href="home.html">Home</a> |&nbsp;
+                <a href="shop.html">Shop Now</a> |&nbsp;
+                <a href="login.html">Login</a> |&nbsp;
+                <a href="Cart.html">Cart</a> |&nbsp;
+
+            <br />
+          <br />
+          </em>
+    
+        <figure>
+            <a href="#oolong"><img src="Images/pageoolongtea.jpg" alt="Oolong Tea" style="margin:0px 25px; width: 532px; height: 437px;"/></a>
+            <figcaption><em>Oolong Tea<br />
+                A traditional Chinese tea. Oolong tea comes from the Camellia Sinensis plant. This plant contains certain enzymes which causes oxidation, giving it the delicious bitter taste.
+            </em></figcaption>
+        </figure>
+        <asp:Label ID="Label1" runat="server" Text="Label">Quantity: </asp:Label> <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Add to Cart" />
+
+        <br />
+        <br />
+        <asp:Label ID="conditionLabel" runat="server" Text="Label" Visible="False"></asp:Label>
+
+    </div>
+   
+    </form>
+</body>
+</html>

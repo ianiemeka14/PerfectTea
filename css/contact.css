@@ -1,0 +1,190 @@
+*{
+	
+	animation: fadeIn 1s;
+}
+
+body{
+	background-color: #fff;
+	
+	
+}
+
+nav{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+a{
+	color: #81a13b;
+	text-align: center;
+	text-decoration: none;
+	width: 100px;
+	padding: 1em 0;
+	display: inline-block;
+	font-weight: bold;
+	transition: all .4s ease-in-out;
+	
+}
+
+
+.line{
+	width: 100px;
+	height: 3px;
+	background-color: #81a13b;
+	transition: all .4s ease-in-out;
+	
+}
+
+a:nth-child(2):hover ~ .line{
+	transform: translate(105px);
+	transition: all .4s ease-in-out;
+	background-color: #000;
+	
+}
+
+a:nth-child(2):hover{
+	color: #000;
+}
+
+a:nth-child(3):hover ~ .line{
+	transform: translate(210px);
+	transition: all .4s ease-in-out;
+	background-color: tomato;
+}
+
+a:nth-child(3):hover{
+	color: tomato;
+}
+
+a:nth-child(4):hover ~ .line{
+	transform: translate(315px);
+	transition: all .4s ease-in-out;
+	background-color: #d4cc0a;
+	
+}
+
+a:nth-child(4):hover{
+	color: #d4cc0a;
+}
+
+img.logo{
+	height: 180px;
+	position: absolute;
+    top: 0;
+    bottom: 75%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.container2{
+	width: 80%;
+	margin: 50px auto;
+    top: 40%;
+	left: 10%;
+	position: absolute;
+
+}
+
+
+.contact_box{
+	background: #81a13b;
+	display: flex;
+	font-family: 'Poppins', sans-serif;
+}
+
+.contact_left{
+	flex-basis: 60%;
+	padding: 40px 60px;
+	
+}
+
+h3{
+	color: #f2e34e;
+	
+}
+
+h1{
+	color: #000
+	padding-top: 10px;
+}
+
+.contact_right{
+	flex-basis: 40%;
+	padding: 40px;
+	background: #000;
+	color: white;
+}
+
+h1{
+	margin-bottom: 10px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.input_row{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.input_row .input_group{
+	flex-basis: 45%;
+}
+
+input{
+	width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding-bottom: 5px;	
+}
+
+textarea{
+	width: 100%;
+	border: 1px solid black;
+	outline: none;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+label{
+	margin-bottom: 6px;
+	display: block;
+	color: #f2e34e;
+}
+
+button{
+   background: #f2e34e;
+   width: 100px;
+   border: none;
+   outline: none;
+   color: #000;
+   height: 35px;
+   border-radius: 30px;
+   margin-top: 20px;
+   box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);   
+   
+}
+
+.buttons{
+	     width: 100%;
+		 z-index: 1;
+		 margin: 40px 0 10px 0;
+		 top: 130%;
+		 position: absolute;
+		 display: block;
+}
+
+
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}

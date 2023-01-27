@@ -1,0 +1,178 @@
+:root{
+	--primary-font: 'Acme', sans-serif;
+	--primary-color: #81a13b;
+	--secondary-color: #fce574;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--primary-font);
+}
+
+body{
+	margin:0;	
+	font-size: 17px;
+	color: var(--primary-color);
+	line-height: 1.6;
+}
+
+a,a:hover,a:visited,a:active,a:link{
+    color: inherit;
+    text-decoration: none;
+}
+
+#showcase{
+	background-image:url('../Images/fullscreen_img.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	display:flex;
+    flex-direction: column;
+	justify-content:center;
+	align-items:center;
+	text-align: center;
+	padding: 0 20px;
+	position: relative;
+	animation: fadeIn 3s;
+	
+}
+
+#showcase h1{
+	font-size: 50px;
+	z-index: 1;
+	line-height: 1.2;
+	animation: fadeIn 3s;
+	
+}
+
+#showcase .btn{
+	font-size: 20px;
+	background: none;
+	border: var(--primary-color) 3px solid;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin: 10px;
+	z-index: 1;
+	cursor: pointer;
+	transition: 0.8s;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	animation: fadeIn 3s;
+
+	
+}
+
+#showcase .btn1{
+	color: #fff
+}
+
+#showcase .btn1:hover{
+	
+	color: #fff;
+}
+
+#showcase .btn::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 0%;
+    background: var(--primary-color);
+	z-index: -1;
+	transition: 0.8s;
+	
+}
+
+#showcase .btn1::before{
+	bottom: 0;
+	border-radius: 50% 50% 0 0;
+	
+}
+
+
+
+#showcase .btn1:hover::before{
+	height: 180%;
+}
+
+.color-overlay{
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.3;
+	position: absolute;
+}
+
+.logo{
+	cursor: pointer;
+	text-align: center;
+	flex-basis: 50%;
+	width: 100px;
+	height: 100px;	
+}
+
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    transition: top 0.4s;
+    overflow: hidden;
+	background-color: #ececec00;
+    z-index: 99;
+}
+
+
+
+#navlist{
+	list-style: none;	
+}
+
+#navlist li{
+	display: inline-block;
+    padding: 0px 40px;
+	color: var(--primary-color);
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.nav_item::after{
+	content: "";
+	display: block;
+	width: 0px;
+	height: 1px;
+	background: var(--primary-color);
+	transition: width .3s;
+}
+
+.nav_item:hover::after{
+	width: 100%;
+	transition: width .3s;
+	
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}

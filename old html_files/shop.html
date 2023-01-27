@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <title>Tea Pose</title>
+
+    <style>
+        .textOverImage{
+            position:relative;
+            width:300px;
+            height:275px;
+            float:inherit;
+            margin:1px;
+            background-size:100%;
+            background-position:center;
+
+        }
+        .textOverImage:hover{   
+            background-size:100%;
+
+        }
+
+        .textOverImage:after{
+            position:absolute;
+            top:100%;
+            bottom:0;
+            left:0;
+            right:0;
+            word-wrap:break-word;
+            white-space:pre-wrap;
+            overflow:hidden;
+            background-color:rgba(0,0,0,0.6);
+            color:#fff;
+            padding:0 8px;
+            opacity:0;
+            content:attr(data-text);
+            font-size:150%;
+            transition:0.5s; 
+
+        }
+
+        .textOverImage:hover:after{
+            opacity:1;
+            top:auto;
+            padding: 8px;
+            background-color:rgba(0,0,0,0.6);
+        }
+
+        .textOverImage:first-line{
+            color:#fff;
+            font-weight:bold;
+            font-size: 1.5em;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div align="center"><a href="index.html"><img src="Images/logo.png" width="180" height="180" /></a> <br />
+
+            <em>
+                <a href="index.html">Home</a> |&nbsp;
+                <a href="shop.html">Shop Now</a> |&nbsp;
+                <a href="login.html">Login</a> |&nbsp;
+                <a href="Cart.html">Cart</a> |&nbsp;
+                <br />
+            </em>
+
+        <p>Check out our delicious flavors</p> <br />
+            
+        <a class="textOverImage" href="greentea.html" data-text="Matcha Green Tea $9.00"><img src="Images/greentea.jpg" width="300" height="275" alt="Our delicious Green Tea!" style="margin:0px 25px"></a>
+        <a class="textOverImage" href="chamomile.html" data-text="Chamomile Tea $7.00"><img src="Images/chamomiletea.jpg" width="300" height="275" alt="Our delicious Chamomile Tea!" style="margin:0px 25px"></a> 
+        <br /><br /> 
+       
+
+        <a class="textOverImage" href="blacktea.html" data-text="Black Tea $6.00"><img src="Images/oolongtea.jpg" " width="300" height="275" alt="Our delicious Oolong Tea!" style="margin:0px 25px"></a>
+        <a class="textOverImage" href="mint.html" data-text="Mint Tea $8.00"><img src="Images/mint.jpg" width="300" height="275" alt="Our delicious Peppermint Tea!" style="margin:0px 25px"></a>
+
+
+    
+    </div>
+    </form>
+</body>
+</html>
